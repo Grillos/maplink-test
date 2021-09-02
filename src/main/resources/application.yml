@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: maplink-api
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/maplink-db?createDatabaseIfNotExist=true&useSSL=false
+    username: user_maplink
+    password: r4cc00n
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    database: MYSQL
