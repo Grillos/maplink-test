@@ -52,8 +52,8 @@ public class ClientController {
     }
     
     @PutMapping("/{id}")
-    public void update(@PathVariable Long id, @RequestBody @Valid Client client) {
-    	service.update(id, client);
+    public ClientDto update(@PathVariable Long id, @RequestBody @Valid ClientRequest request) {
+    	return service.update(id, new Client(request));
     }
     
     @DeleteMapping("/{id}")

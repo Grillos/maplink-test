@@ -3,9 +3,11 @@ package com.maplink.test.dto;
 import com.maplink.test.domain.Client;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class ClientDto {
 	

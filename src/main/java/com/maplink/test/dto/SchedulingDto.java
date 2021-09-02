@@ -5,9 +5,11 @@ import java.time.LocalDateTime;
 import com.maplink.test.domain.Scheduling;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class SchedulingDto {
 	

@@ -5,9 +5,11 @@ import java.math.BigDecimal;
 import com.maplink.test.domain.Service;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class ServiceDto {
 	

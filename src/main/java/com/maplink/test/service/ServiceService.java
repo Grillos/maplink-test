@@ -27,9 +27,9 @@ public class ServiceService {
 		return new ServiceDto(repository.save(service));
 	}
 	
-	public void update(Long id, com.maplink.test.domain.Service service) {
+	public ServiceDto update(Long id, com.maplink.test.domain.Service service) {
 		service.setId(id);
-		repository.save(service);
+		return new ServiceDto(repository.save(service));
 	}
 	
 	public void delete(Long id) {

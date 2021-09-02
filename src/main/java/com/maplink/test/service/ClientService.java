@@ -28,9 +28,9 @@ public class ClientService {
 		return new ClientDto(repository.save(client));
 	}
 	
-	public void update(Long id, Client client) {
+	public ClientDto update(Long id, Client client) {
 		client.setId(id);
-		repository.save(client);
+		return new ClientDto(repository.save(client));
 	}
 	
 	public void delete(Long id) {

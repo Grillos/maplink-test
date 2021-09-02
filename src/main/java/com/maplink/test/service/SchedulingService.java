@@ -42,7 +42,7 @@ public class SchedulingService {
 		return new SchedulingDto(repository.save(scheduling));
 	}
 	
-	public void updateByHour(Long id, SchedulingHourUpdateRequest request) {
+	public SchedulingDto updateByHour(Long id, SchedulingHourUpdateRequest request) {
 		
 		Scheduling scheduling = repository.findById(id).orElseThrow(() -> new ErrorResponseException(
 				Response.builder()
@@ -54,7 +54,7 @@ public class SchedulingService {
 		scheduling.setHour(LocalDateTime.parse(request.getHour(), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
 		scheduling.setNote(request.getNote());
 		
-		repository.save(scheduling);
+		return new SchedulingDto(repository.save(scheduling));
 	}
 	
 	public void delete(Long id) {
